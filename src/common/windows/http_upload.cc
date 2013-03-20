@@ -294,7 +294,7 @@ bool HTTPUpload::GenerateRequestBody(const map<wstring, wstring> &parameters,
 	
   map<wstring, wstring> files;
   files.insert(make_pair(file_part_name, upload_file));
-  files.insert(make_pair(L"logk4t.txt", log_file));
+  files.insert(make_pair(L"log_file", log_file));
 
   // Now append the upload file as a binary (octet-stream) part
   for (map<wstring, wstring>::iterator i = files.begin(); i != files.end(); i++) {
