@@ -90,6 +90,7 @@ class CrashReportSender {
   ReportResult SendCrashReport(const wstring &url,
                                const map<wstring, wstring> &parameters,
                                const wstring &dump_file_name,
+							   const wstring &log_file,
                                wstring *report_code);
 
  private:

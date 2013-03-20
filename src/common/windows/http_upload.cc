@@ -66,6 +66,7 @@ bool HTTPUpload::SendRequest(const wstring &url,
                              const map<wstring, wstring> &parameters,
                              const wstring &upload_file,
                              const wstring &file_part_name,
+							 const wstring &log_file,
                              int *timeout,
                              wstring *response_body,
                              int *response_code) {
@@ -143,8 +144,8 @@ bool HTTPUpload::SendRequest(const wstring &url,
                         HTTP_ADDREQ_FLAG_ADD);
 
   string request_body;
-  if (!GenerateRequestBody(parameters, upload_file,
-                           file_part_name, boundary, &request_body)) {
+  if (!GenerateRequestBody(parameters, upload_file, file_part_name, 
+                           log_file, boundary, &request_body)) {
     return false;
   }
 
@@ -271,12 +272,9 @@ wstring HTTPUpload::GenerateRequestHeader(const wstring &boundary) {
 bool HTTPUpload::GenerateRequestBody(const map<wstring, wstring> &parameters,
                                      const wstring &upload_file,
                                      const wstring &file_part_name,
+									 const wstring &log_file,
                                      const wstring &boundary,
                                      string *request_body) {
-  vector<char> contents;
-  if (!GetFileContents(upload_file, &contents)) {
-    return false;
-  }
 
   string boundary_str = WideToUTF8(boundary);
   if (boundary_str.empty()) {
@@ -293,29 +291,40 @@ bool HTTPUpload::GenerateRequestBody(const map<wstring, wstring> &parameters,
                          WideToUTF8(pos->first) + "\"\r\n\r\n" +
                          WideToUTF8(pos->second) + "\r\n");
   }
+	
+  map<wstring, wstring> files;
+  files.insert(make_pair(file_part_name, upload_file));
+  files.insert(make_pair(L"logk4t.txt", log_file));
 
   // Now append the upload file as a binary (octet-stream) part
-  string filename_utf8 = WideToUTF8(upload_file);
-  if (filename_utf8.empty()) {
-    return false;
-  }
+  for (map<wstring, wstring>::iterator i = files.begin(); i != files.end(); i++) {
+	  vector<char> contents;
+	  if (!GetFileContents(i->second, &contents)) {
+		return false;
+	  }
 
-  string file_part_name_utf8 = WideToUTF8(file_part_name);
-  if (file_part_name_utf8.empty()) {
-    return false;
-  }
+	  string filename_utf8 = WideToUTF8(i->second);
+	  if (filename_utf8.empty()) {
+		return false;
+	  }
 
-  request_body->append("--" + boundary_str + "\r\n");
-  request_body->append("Content-Disposition: form-data; "
-                       "name=\"" + file_part_name_utf8 + "\"; "
-                       "filename=\"" + filename_utf8 + "\"\r\n");
-  request_body->append("Content-Type: application/octet-stream\r\n");
-  request_body->append("\r\n");
+	  string file_part_name_utf8 = WideToUTF8(i->first);
+	  if (file_part_name_utf8.empty()) {
+		return false;
+	  }
 
-  if (!contents.empty()) {
-      request_body->append(&(contents[0]), contents.size());
+	  request_body->append("--" + boundary_str + "\r\n");
+	  request_body->append("Content-Disposition: form-data; "
+						   "name=\"" + file_part_name_utf8 + "\"; "
+						   "filename=\"" + filename_utf8 + "\"\r\n");
+	  request_body->append("Content-Type: application/octet-stream\r\n");
+	  request_body->append("\r\n");
+
+	  if (!contents.empty()) {
+		  request_body->append(&(contents[0]), contents.size());
+	  }
+	  request_body->append("\r\n");
   }
-  request_body->append("\r\n");
   request_body->append("--" + boundary_str + "--\r\n");
   return true;
 }

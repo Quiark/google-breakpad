@@ -69,6 +69,7 @@ class HTTPUpload {
                           const map<wstring, wstring> &parameters,
                           const wstring &upload_file,
                           const wstring &file_part_name,
+						  const wstring &log_file,
                           int *timeout,
                           wstring *response_body,
                           int *response_code);
@@ -94,6 +95,7 @@ class HTTPUpload {
   static bool GenerateRequestBody(const map<wstring, wstring> &parameters,
                                   const wstring &upload_file,
                                   const wstring &file_part_name,
+								  const wstring &log_file,
                                   const wstring &boundary,
                                   string *request_body);
 

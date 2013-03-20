@@ -1169,7 +1169,8 @@
           'WINVER=0x0600',
           'WIN32',
           '_WINDOWS',
-          '_HAS_EXCEPTIONS=0',
+          #'_HAS_EXCEPTIONS=0',
+          #'_HAS_ITERATOR_DEBUGGING=0',
           'NOMINMAX',
           '_CRT_RAND_S',
           'CERT_CHAIN_PARA_HAS_EXTRA_FIELDS',
@@ -1186,7 +1187,7 @@
         'msvs_settings': {
           'VCCLCompilerTool': {
             'MinimalRebuild': 'false',
-            'ExceptionHandling': '0',
+            #'ExceptionHandling': '0',
             'BufferSecurityCheck': 'true',
             'EnableFunctionLevelLinking': 'true',
             'RuntimeTypeInfo': 'false',
