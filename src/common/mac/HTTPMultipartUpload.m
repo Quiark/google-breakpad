@@ -72,6 +72,7 @@
 
   [data appendData:[pre dataUsingEncoding:NSUTF8StringEncoding]];
   [data appendData:contents];
+  [data appendBytes:"\r\n" length:2];
 
   return data;
 }
