@@ -1,0 +1,13 @@
+src/client/mac/DerivedData/*
+src/client/mac/Breakpad.xcodeproj/xcuserdata/
+src/tools/mac/crash_report/crash_report.xcodeproj/xcuserdata/
+src/tools/mac/dump_syms/dump_syms.xcodeproj/xcuserdata/
+src/tools/mac/symupload/symupload.xcodeproj/xcuserdata/
+
+.*.swp
+
+src/client/mac/Breakpad.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/WorkspaceSettings.xcsettings
+
+src/client/mac/Breakpad.xcodeproj/project.xcworkspace/xcuserdata/roman.xcuserdatad/UserInterfaceState.xcuserstate
+
+src/client/mac/Breakpad.xcodeproj/project.xcworkspace/contents.xcworkspacedata

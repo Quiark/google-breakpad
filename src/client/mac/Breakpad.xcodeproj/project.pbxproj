@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 45;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -577,9 +577,6 @@
 		8B31007011F0CD3C00FCF3E4 /* GTMDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMDefines.h; path = ../../common/mac/GTMDefines.h; sourceTree = SOURCE_ROOT; };
 		8B3101E911F0CDE300FCF3E4 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		8B31022211F0CE1000FCF3E4 /* GTMGarbageCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMGarbageCollection.h; path = ../../common/mac/GTMGarbageCollection.h; sourceTree = SOURCE_ROOT; };
-		8B31027711F0D3AF00FCF3E4 /* BreakpadDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadDebug.xcconfig; path = ../../common/mac/BreakpadDebug.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B31027811F0D3AF00FCF3E4 /* BreakpadRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadRelease.xcconfig; path = ../../common/mac/BreakpadRelease.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B31FFF611F0C90500FCF3E4 /* Breakpad.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Breakpad.xcconfig; path = ../../common/mac/Breakpad.xcconfig; sourceTree = SOURCE_ROOT; };
 		8DC2EF5B0486A6940098B216 /* Breakpad.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Breakpad.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D23F4B2C12A7E13200686C8D /* minidump_generator_test.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = minidump_generator_test.cc; path = tests/minidump_generator_test.cc; sourceTree = "<group>"; };
 		D23F4B9A12A8688800686C8D /* minidump_generator_test_helper.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = minidump_generator_test_helper.cc; path = tests/minidump_generator_test_helper.cc; sourceTree = "<group>"; };
@@ -843,9 +840,6 @@
 			isa = PBXGroup;
 			children = (
 				D2F9A43812131F3B002747C1 /* gtest */,
-				8B31FFF611F0C90500FCF3E4 /* Breakpad.xcconfig */,
-				8B31027711F0D3AF00FCF3E4 /* BreakpadDebug.xcconfig */,
-				8B31027811F0D3AF00FCF3E4 /* BreakpadRelease.xcconfig */,
 				F95BB8A3101F94C300AA053B /* Tools */,
 				32DBCF5E0370ADEE00C91783 /* Breakpad_Prefix.pch */,
 				F92C538D0ECCE6F2009BE4BA /* client */,
@@ -1175,7 +1169,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1DEB91AD08733DA50010E9CD /* Build configuration list for PBXNativeTarget "Breakpad" */;
 			buildPhases = (
-				F97A0E850ED4EC15008784D3 /* Change install name of breakpadUtilities */,
 				8DC2EF500486A6940098B216 /* Headers */,
 				8DC2EF520486A6940098B216 /* Resources */,
 				8DC2EF540486A6940098B216 /* Sources */,
@@ -1248,9 +1241,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F92C53580ECCE36D009BE4BA /* Build configuration list for PBXNativeTarget "Inspector" */;
 			buildPhases = (
-				F94584840F27FB40009A47BF /* Change install name of breakpadUtilities */,
 				F92C53510ECCE349009BE4BA /* Sources */,
 				F92C53520ECCE349009BE4BA /* Frameworks */,
+				306DFFCC170004BF00E8F805 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1393,8 +1386,11 @@
 /* Begin PBXProject section */
 		0867D690FE84028FC02AAC07 /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+			};
 			buildConfigurationList = 1DEB91B108733DA50010E9CD /* Build configuration list for PBXProject "Breakpad" */;
-			compatibilityVersion = "Xcode 3.1";
+			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
@@ -1620,33 +1616,18 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		F94584840F27FB40009A47BF /* Change install name of breakpadUtilities */ = {
+		306DFFCC170004BF00E8F805 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Change install name of breakpadUtilities";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -id \"@executable_path/../Resources/breakpadUtilities.dylib\" \"${BUILT_PRODUCTS_DIR}/breakpadUtilities.dylib\"\n";
-		};
-		F97A0E850ED4EC15008784D3 /* Change install name of breakpadUtilities */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Change install name of breakpadUtilities";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "#!/bin/bash\ninstall_name_tool -id \"@executable_path/../Frameworks/Breakpad.framework/Resources/breakpadUtilities.dylib\" \"${BUILT_PRODUCTS_DIR}/breakpadUtilities.dylib\"\n";
+			shellScript = "install_name_tool -change \"@executable_path/../Frameworks/Breakpad.framework/Resources/breakpadUtilities.dylib\" \"@executable_path/breakpadUtilities.dylib\" ${BUILT_PRODUCTS_DIR}/Inspector";
 		};
 		F9C77DD80F7DD5CF0045F7DB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2085,15 +2066,18 @@
 		1DEB91AE08733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Framework/Breakpad_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = Framework/Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path";
 				PRODUCT_NAME = Breakpad;
+				VALID_ARCHS = i386;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Debug;
@@ -2101,33 +2085,37 @@
 		1DEB91AF08733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Framework/Breakpad_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = Framework/Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path";
 				PRODUCT_NAME = Breakpad;
+				VALID_ARCHS = i386;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = Release;
 		};
 		1DEB91B208733DA50010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B31027711F0D3AF00FCF3E4 /* BreakpadDebug.xcconfig */;
 			buildSettings = {
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
-				SDKROOT = macosx10.5;
+				SDKROOT = "";
+				VALID_ARCHS = i386;
 			};
 			name = Debug;
 		};
 		1DEB91B308733DA50010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B31027811F0D3AF00FCF3E4 /* BreakpadRelease.xcconfig */;
 			buildSettings = {
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				SDKROOT = "";
+				VALID_ARCHS = i386;
 			};
 			name = Release;
 		};
@@ -2137,12 +2125,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = minidump_generator_test_helper;
 			};
 			name = Debug;
@@ -2151,11 +2138,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				GCC_ENABLE_FIX_AND_CONTINUE = YES;
 				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = minidump_generator_test_helper;
 			};
 			name = "Debug With Code Coverage";
@@ -2166,11 +2152,10 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_MODEL_TUNING = G5;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INSTALL_PATH = /usr/local/bin;
-				PREBINDING = NO;
 				PRODUCT_NAME = minidump_generator_test_helper;
 				ZERO_LINK = NO;
 			};
@@ -2180,9 +2165,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					../../testing,
@@ -2190,7 +2177,6 @@
 					../../testing/gtest,
 					../../testing/gtest/include,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = gtest;
 			};
 			name = Debug;
@@ -2199,6 +2185,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					../../testing,
@@ -2206,7 +2194,6 @@
 					../../testing/gtest,
 					../../testing/gtest/include,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = gtest;
 			};
 			name = "Debug With Code Coverage";
@@ -2215,9 +2202,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_FIX_AND_CONTINUE = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					../../testing,
@@ -2225,7 +2213,6 @@
 					../../testing/gtest,
 					../../testing/gtest/include,
 				);
-				PREBINDING = NO;
 				PRODUCT_NAME = gtest;
 				ZERO_LINK = NO;
 			};
@@ -2238,6 +2225,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "BP_LOGGING_INCLUDE=\\\"client/mac/tests/testlogging.h\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../testing,
@@ -2256,6 +2244,7 @@
 		D2F9A544121383A1002747C1 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../testing,
@@ -2274,6 +2263,7 @@
 		D2F9A545121383A1002747C1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../testing,
@@ -2292,6 +2282,7 @@
 		F92C53560ECCE34A009BE4BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = Inspector;
 			};
@@ -2300,6 +2291,7 @@
 		F92C53570ECCE34A009BE4BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = Inspector;
 			};
@@ -2308,10 +2300,12 @@
 		F92C563D0ECD10B3009BE4BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
@@ -2323,10 +2317,12 @@
 		F92C563E0ECD10B3009BE4BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
@@ -2338,6 +2334,8 @@
 		F92C56A30ECE04A8009BE4BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "sender/crash_report_sender-Info.plist";
 				PRODUCT_NAME = crash_report_sender;
@@ -2347,6 +2345,8 @@
 		F92C56A40ECE04A8009BE4BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "sender/crash_report_sender-Info.plist";
 				PRODUCT_NAME = crash_report_sender;
@@ -2357,6 +2357,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = "BP_LOGGING_INCLUDE=\\\"client/mac/tests/testlogging.h\\\"";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../..,
@@ -2372,6 +2373,7 @@
 		F93803C10F808210004D428B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../..,
@@ -2387,6 +2389,7 @@
 		F93DE2D30F82A67400608B94 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = minidump_file_writer_unittest;
 			};
@@ -2395,6 +2398,7 @@
 		F93DE2D40F82A67400608B94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = minidump_file_writer_unittest;
 			};
@@ -2407,6 +2411,7 @@
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = "BP_LOGGING_INCLUDE=\\\"client/mac/tests/testlogging.h\\\"";
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../../..,
 					../..,
@@ -2426,6 +2431,7 @@
 		F93DE32F0F82C55700608B94 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../../..,
 					../..,
@@ -2444,24 +2450,28 @@
 		};
 		F93DE3B90F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B31027711F0D3AF00FCF3E4 /* BreakpadDebug.xcconfig */;
 			buildSettings = {
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
+				SDKROOT = "";
+				VALID_ARCHS = i386;
 			};
 			name = "Debug With Code Coverage";
 		};
 		F93DE3BA0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				FRAMEWORK_VERSION = A;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = Framework/Breakpad_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = Framework/Info.plist;
-				INSTALL_PATH = "@executable_path/../Frameworks";
+				INSTALL_PATH = "@loader_path";
 				PRODUCT_NAME = Breakpad;
+				VALID_ARCHS = i386;
 				WRAPPER_EXTENSION = framework;
 			};
 			name = "Debug With Code Coverage";
@@ -2469,6 +2479,7 @@
 		F93DE3BB0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = Inspector;
 			};
@@ -2477,10 +2488,12 @@
 		F93DE3BC0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
@@ -2492,6 +2505,8 @@
 		F93DE3BD0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "sender/crash_report_sender-Info.plist";
 				PRODUCT_NAME = crash_report_sender;
@@ -2501,7 +2516,9 @@
 		F93DE3BE0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = testapp/Info.plist;
 				PRODUCT_NAME = BreakpadTest;
 			};
@@ -2510,6 +2527,8 @@
 		F93DE3BF0F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = All;
 			};
 			name = "Debug With Code Coverage";
@@ -2517,11 +2536,13 @@
 		F93DE3C00F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				INFOPLIST_FILE = "UnitTests-Info.plist";
 				PRODUCT_NAME = UnitTests;
@@ -2532,6 +2553,7 @@
 		F93DE3C10F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../..,
 					../../..,
@@ -2547,6 +2569,7 @@
 		F93DE3C20F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
 				PRODUCT_NAME = minidump_file_writer_unittest;
 			};
@@ -2555,6 +2578,7 @@
 		F93DE3C30F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = (
 					../../..,
 					../..,
@@ -2574,6 +2598,8 @@
 		F94585850F782326009A47BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = All;
 			};
 			name = Debug;
@@ -2581,6 +2607,8 @@
 		F94585860F782326009A47BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				PRODUCT_NAME = All;
 			};
 			name = Release;
@@ -2588,7 +2616,9 @@
 		F9C44DA80EF060A8003AEBAA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = testapp/Info.plist;
 				PRODUCT_NAME = BreakpadTest;
 			};
@@ -2597,7 +2627,9 @@
 		F9C44DA90EF060A8003AEBAA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/build/$(CONFIGURATION)";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = testapp/Info.plist;
 				PRODUCT_NAME = BreakpadTest;
 			};
@@ -2606,11 +2638,13 @@
 		F9C77DDC0F7DD5D00045F7DB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "UnitTests-Info.plist";
 				PRODUCT_NAME = UnitTests;
 				WRAPPER_EXTENSION = octest;
@@ -2620,11 +2654,13 @@
 		F9C77DDD0F7DD5D00045F7DB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
 				);
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "UnitTests-Info.plist";
 				PRODUCT_NAME = UnitTests;
 				WRAPPER_EXTENSION = octest;

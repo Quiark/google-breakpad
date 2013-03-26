@@ -89,9 +89,6 @@
 		4D72CA5613DFBA84006CABE3 /* md5.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = md5.cc; path = ../../../common/md5.cc; sourceTree = SOURCE_ROOT; };
 		5578003E0BE1F28500EC23E0 /* macho_utilities.cc */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = macho_utilities.cc; path = ../../../common/mac/macho_utilities.cc; sourceTree = SOURCE_ROOT; };
 		5578003F0BE1F28500EC23E0 /* macho_utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = macho_utilities.h; path = ../../../common/mac/macho_utilities.h; sourceTree = SOURCE_ROOT; };
-		8B31025311F0D2D400FCF3E4 /* Breakpad.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Breakpad.xcconfig; path = ../../../common/mac/Breakpad.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B3102DA11F0D65600FCF3E4 /* BreakpadDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadDebug.xcconfig; path = ../../../common/mac/BreakpadDebug.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B3102DB11F0D65600FCF3E4 /* BreakpadRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadRelease.xcconfig; path = ../../../common/mac/BreakpadRelease.xcconfig; sourceTree = SOURCE_ROOT; };
 		8B31FF2411F0C62700FCF3E4 /* dwarf_cfi_to_module.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dwarf_cfi_to_module.cc; path = ../../../common/dwarf_cfi_to_module.cc; sourceTree = SOURCE_ROOT; };
 		8B31FF2511F0C62700FCF3E4 /* dwarf_cfi_to_module.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dwarf_cfi_to_module.h; path = ../../../common/dwarf_cfi_to_module.h; sourceTree = SOURCE_ROOT; };
 		8B31FF2611F0C62700FCF3E4 /* dwarf_cu_to_module.cc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = dwarf_cu_to_module.cc; path = ../../../common/dwarf_cu_to_module.cc; sourceTree = SOURCE_ROOT; };
@@ -182,9 +179,6 @@
 		08FB7794FE84155DC02AAC07 /* crash_report */ = {
 			isa = PBXGroup;
 			children = (
-				8B31025311F0D2D400FCF3E4 /* Breakpad.xcconfig */,
-				8B3102DA11F0D65600FCF3E4 /* BreakpadDebug.xcconfig */,
-				8B3102DB11F0D65600FCF3E4 /* BreakpadRelease.xcconfig */,
 				F9C7ECE10E8ABC7F00E953AD /* DWARF */,
 				162F64FC161C5ECB00CD68D5 /* arch_utilities.cc */,
 				162F64FD161C5ECB00CD68D5 /* arch_utilities.h */,
@@ -394,6 +388,7 @@
 			isa = PBXProject;
 			buildConfigurationList = 1DEB927808733DD40010E9CD /* Build configuration list for PBXProject "crash_report" */;
 			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
 			hasScannedForEncodings = 1;
 			knownRegions = (
 				English,
@@ -493,7 +488,6 @@
 		};
 		1DEB927908733DD40010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B3102DA11F0D65600FCF3E4 /* BreakpadDebug.xcconfig */;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = HAVE_MACH_O_NLIST_H;
 				GCC_TREAT_WARNINGS_AS_ERRORS = NO;
@@ -502,7 +496,6 @@
 		};
 		1DEB927A08733DD40010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B3102DB11F0D65600FCF3E4 /* BreakpadRelease.xcconfig */;
 			buildSettings = {
 				GCC_PREPROCESSOR_DEFINITIONS = HAVE_MACH_O_NLIST_H;
 			};

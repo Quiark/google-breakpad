@@ -277,9 +277,6 @@
 		4D72CAF413DFBAC2006CABE3 /* md5.cc */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = md5.cc; path = ../../../common/md5.cc; sourceTree = SOURCE_ROOT; };
 		557800890BE1F3AB00EC23E0 /* macho_utilities.cc */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = macho_utilities.cc; path = ../../../common/mac/macho_utilities.cc; sourceTree = SOURCE_ROOT; };
 		5578008A0BE1F3AB00EC23E0 /* macho_utilities.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = macho_utilities.h; path = ../../../common/mac/macho_utilities.h; sourceTree = SOURCE_ROOT; };
-		8B31023E11F0CF1C00FCF3E4 /* Breakpad.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Breakpad.xcconfig; path = ../../../common/mac/Breakpad.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B3102D411F0D60300FCF3E4 /* BreakpadDebug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadDebug.xcconfig; path = ../../../common/mac/BreakpadDebug.xcconfig; sourceTree = SOURCE_ROOT; };
-		8B3102D511F0D60300FCF3E4 /* BreakpadRelease.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = BreakpadRelease.xcconfig; path = ../../../common/mac/BreakpadRelease.xcconfig; sourceTree = SOURCE_ROOT; };
 		9BDF186D0B1BB43700F8391B /* dump_syms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dump_syms.h; path = ../../../common/mac/dump_syms.h; sourceTree = "<group>"; };
 		9BDF186E0B1BB43700F8391B /* dump_syms_tool.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = dump_syms_tool.mm; sourceTree = "<group>"; };
 		9BE650410B52F6D800611104 /* file_id.cc */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = file_id.cc; path = ../../../common/mac/file_id.cc; sourceTree = SOURCE_ROOT; };
@@ -477,9 +474,6 @@
 		08FB7794FE84155DC02AAC07 /* dump_syms */ = {
 			isa = PBXGroup;
 			children = (
-				8B31023E11F0CF1C00FCF3E4 /* Breakpad.xcconfig */,
-				8B3102D411F0D60300FCF3E4 /* BreakpadDebug.xcconfig */,
-				8B3102D511F0D60300FCF3E4 /* BreakpadRelease.xcconfig */,
 				B89E0E9D11665A9500DD08C9 /* TESTING */,
 				F9F5344B0E7C8FFC0012363F /* DWARF */,
 				B89E0E6C1166569700DD08C9 /* MACHO */,
@@ -1223,7 +1217,6 @@
 /* Begin XCBuildConfiguration section */
 		1DEB927908733DD40010E9CD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B3102D411F0D60300FCF3E4 /* BreakpadDebug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = ../../..;
 			};
@@ -1231,7 +1224,6 @@
 		};
 		1DEB927A08733DD40010E9CD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B3102D511F0D60300FCF3E4 /* BreakpadRelease.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = ../../..;
 			};

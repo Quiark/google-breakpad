@@ -28,7 +28,7 @@
 // OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 
-#define VERBOSE 0
+#define VERBOSE 1
 
 #if VERBOSE
   static bool gDebugLog = true;
