@@ -1243,7 +1243,7 @@
 			buildPhases = (
 				F92C53510ECCE349009BE4BA /* Sources */,
 				F92C53520ECCE349009BE4BA /* Frameworks */,
-				306DFFCC170004BF00E8F805 /* ShellScript */,
+				306DFFCC170004BF00E8F805 /* Change breakpadUtilities.dylib install_name */,
 			);
 			buildRules = (
 			);
@@ -1616,18 +1616,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		306DFFCC170004BF00E8F805 /* ShellScript */ = {
+		306DFFCC170004BF00E8F805 /* Change breakpadUtilities.dylib install_name */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "Change breakpadUtilities.dylib install_name";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "install_name_tool -change \"@executable_path/../Frameworks/Breakpad.framework/Resources/breakpadUtilities.dylib\" \"@executable_path/breakpadUtilities.dylib\" ${BUILT_PRODUCTS_DIR}/Inspector";
+			shellScript = "install_name_tool -change \"@loader_path/Resources/breakpadUtilities.dylib\" \"@executable_path/breakpadUtilities.dylib\" ${BUILT_PRODUCTS_DIR}/Inspector";
+			showEnvVarsInLog = 0;
 		};
 		F9C77DD80F7DD5CF0045F7DB /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2305,7 +2307,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
@@ -2322,7 +2324,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
@@ -2493,7 +2495,7 @@
 				DYLIB_CURRENT_VERSION = 1;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				HEADER_SEARCH_PATHS = ../..;
-				LD_DYLIB_INSTALL_NAME = "@executable_path/../Frameworks/Breakpad.framework/Resources/$(EXECUTABLE_PATH)";
+				LD_DYLIB_INSTALL_NAME = "@loader_path/Resources/$(EXECUTABLE_PATH)";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-headerpad_max_install_names",
