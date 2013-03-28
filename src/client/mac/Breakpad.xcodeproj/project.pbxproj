@@ -18,10 +18,8 @@
 				F945858C0F782330009A47BF /* PBXTargetDependency */,
 				F945858E0F782333009A47BF /* PBXTargetDependency */,
 				F94585900F782336009A47BF /* PBXTargetDependency */,
-				F93DE3A70F830D1D00608B94 /* PBXTargetDependency */,
 				F95BB8B3101F94D300AA053B /* PBXTargetDependency */,
 				F95BB8B5101F94D300AA053B /* PBXTargetDependency */,
-				F95BB8B7101F94D300AA053B /* PBXTargetDependency */,
 				8B31023911F0CF0600FCF3E4 /* PBXTargetDependency */,
 				8B31051711F1010E00FCF3E4 /* PBXTargetDependency */,
 				8B31051911F1010E00FCF3E4 /* PBXTargetDependency */,
@@ -66,10 +64,8 @@
 		8B3101C711F0CD9F00FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		8B3101CA11F0CDB000FCF3E4 /* AppKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D6A5FE840307C02AAC07 /* AppKit.framework */; };
 		8B3101CB11F0CDB000FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
-		8B3101EA11F0CDE300FCF3E4 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B3101E911F0CDE300FCF3E4 /* SenTestingKit.framework */; };
 		8B31029411F0D54300FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		8B3102E611F0D74C00FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
-		8B3102EB11F0D78000FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		8B31FC8211EFD2B800FCF3E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		8DC2EF570486A6940098B216 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7B1FEA5585E11CA2CBB /* Cocoa.framework */; };
 		D23F4B2E12A7E13200686C8D /* minidump_generator_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D23F4B2C12A7E13200686C8D /* minidump_generator_test.cc */; };
@@ -99,7 +95,6 @@
 		D24641ED12BAC6FB005170D0 /* minidump.cc in Sources */ = {isa = PBXBuildFile; fileRef = D244535212426EBB009BBCE0 /* minidump.cc */; };
 		D24641EE12BAC6FB005170D0 /* pathname_stripper.cc in Sources */ = {isa = PBXBuildFile; fileRef = D244535312426EBB009BBCE0 /* pathname_stripper.cc */; };
 		D24641EF12BAC6FB005170D0 /* basic_code_modules.cc in Sources */ = {isa = PBXBuildFile; fileRef = D244534F12426E98009BBCE0 /* basic_code_modules.cc */; };
-		D24BBBFD121050F000F3D417 /* breakpadUtilities.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F92C563C0ECD10B3009BE4BA /* breakpadUtilities.dylib */; };
 		D24BBD291211EDB100F3D417 /* MachIPC.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92C53790ECCE635009BE4BA /* MachIPC.mm */; };
 		D24BBD321212CACF00F3D417 /* MachIPC.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92C53790ECCE635009BE4BA /* MachIPC.mm */; };
 		D2A5DD301188633800081F03 /* breakpad_nlist_64.cc in Sources */ = {isa = PBXBuildFile; fileRef = F92C53690ECCE3FD009BE4BA /* breakpad_nlist_64.cc */; };
@@ -141,8 +136,6 @@
 		D2F9A53F121383A1002747C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
 		D2F9A541121383A1002747C1 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D2F9A41512131EF0002747C1 /* libgtest.a */; };
 		D2F9A553121383DC002747C1 /* crash_generation_server_test.cc in Sources */ = {isa = PBXBuildFile; fileRef = D2F9A4CE121336F7002747C1 /* crash_generation_server_test.cc */; };
-		F91AF5D00FD60393009D8BE2 /* BreakpadFramework_Test.mm in Sources */ = {isa = PBXBuildFile; fileRef = F91AF5CF0FD60393009D8BE2 /* BreakpadFramework_Test.mm */; };
-		F91AF6210FD60784009D8BE2 /* Breakpad.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8DC2EF5B0486A6940098B216 /* Breakpad.framework */; };
 		F9286B3A0F7EB25800A4DCC8 /* InspectorMain.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9286B390F7EB25800A4DCC8 /* InspectorMain.mm */; };
 		F92C53B80ECCE7B3009BE4BA /* Inspector.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92C53B70ECCE7B3009BE4BA /* Inspector.mm */; };
 		F92C554C0ECCF534009BE4BA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0867D69BFE84028FC02AAC07 /* Foundation.framework */; };
@@ -211,9 +204,6 @@
 		F9C44EA20EF09F93003AEBAA /* HTTPMultipartUpload.m in Sources */ = {isa = PBXBuildFile; fileRef = F92C53770ECCE635009BE4BA /* HTTPMultipartUpload.m */; };
 		F9C44EE50EF0A006003AEBAA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9C44EE40EF0A006003AEBAA /* SystemConfiguration.framework */; };
 		F9C44EE90EF0A3C1003AEBAA /* GTMLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C44EE80EF0A3C1003AEBAA /* GTMLogger.m */; };
-		F9C77DE20F7DD7E30045F7DB /* SimpleStringDictionaryTest.mm in Sources */ = {isa = PBXBuildFile; fileRef = F9C77DE10F7DD7E30045F7DB /* SimpleStringDictionaryTest.mm */; };
-		F9C77DE40F7DD82F0045F7DB /* SimpleStringDictionary.mm in Sources */ = {isa = PBXBuildFile; fileRef = F92C53810ECCE635009BE4BA /* SimpleStringDictionary.mm */; };
-		F9C77E130F7DDF810045F7DB /* GTMSenTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = F9C77E120F7DDF810045F7DB /* GTMSenTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -385,20 +375,6 @@
 			remoteGlobalIDString = D2F9A41412131EF0002747C1;
 			remoteInfo = gtest;
 		};
-		D2F9A5DE12142A6A002747C1 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D2F9A52A121383A1002747C1;
-			remoteInfo = crash_generation_server_test;
-		};
-		F91AF6370FD60A74009D8BE2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DC2EF4F0486A6940098B216;
-			remoteInfo = Breakpad;
-		};
 		F92C564D0ECD10E5009BE4BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
@@ -419,27 +395,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = F92C53530ECCE349009BE4BA;
 			remoteInfo = Inspector;
-		};
-		F93DE2FB0F82C3C600608B94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F93803BD0F80820F004D428B;
-			remoteInfo = generator_test;
-		};
-		F93DE36F0F82CC1300608B94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F93DE32B0F82C55600608B94;
-			remoteInfo = handler_test;
-		};
-		F93DE3A60F830D1D00608B94 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 0867D690FE84028FC02AAC07 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F9C77DD90F7DD5CF0045F7DB;
-			remoteInfo = UnitTests;
 		};
 		F94585870F78232B009A47BF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -476,13 +431,6 @@
 			remoteGlobalIDString = F9C44DA40EF060A8003AEBAA;
 			remoteInfo = BreakpadTest;
 		};
-		F95BB884101F949F00AA053B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F95BB87C101F949F00AA053B /* crash_report.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 8DD76FA10486AA7600D96B5E;
-			remoteInfo = crash_report;
-		};
 		F95BB891101F94AC00AA053B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = F95BB889101F94AC00AA053B /* dump_syms.xcodeproj */;
@@ -517,13 +465,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
 			remoteInfo = symupload;
-		};
-		F95BB8B6101F94D300AA053B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F95BB87C101F949F00AA053B /* crash_report.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 8DD76F960486AA7600D96B5E;
-			remoteInfo = crash_report;
 		};
 		F9C44E190EF0790F003AEBAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -676,7 +617,6 @@
 		F93DE32C0F82C55600608B94 /* handler_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = handler_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		F945849D0F280E3C009A47BF /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = sender/English.lproj/Localizable.strings; sourceTree = "<group>"; };
 		F945859D0F78241E009A47BF /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Framework/Info.plist; sourceTree = "<group>"; };
-		F95BB87C101F949F00AA053B /* crash_report.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = crash_report.xcodeproj; path = ../../tools/mac/crash_report/crash_report.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F95BB889101F94AC00AA053B /* dump_syms.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = dump_syms.xcodeproj; path = ../../tools/mac/dump_syms/dump_syms.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F95BB894101F94C000AA053B /* symupload.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = symupload.xcodeproj; path = ../../tools/mac/symupload/symupload.xcodeproj; sourceTree = SOURCE_ROOT; };
 		F9B6309F100FF96B00D0F4AC /* goArrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = goArrow.png; path = sender/goArrow.png; sourceTree = "<group>"; };
@@ -694,7 +634,6 @@
 		F9C44EE40EF0A006003AEBAA /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		F9C44EE70EF0A3C1003AEBAA /* GTMLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GTMLogger.h; path = ../../common/mac/GTMLogger.h; sourceTree = SOURCE_ROOT; };
 		F9C44EE80EF0A3C1003AEBAA /* GTMLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GTMLogger.m; path = ../../common/mac/GTMLogger.m; sourceTree = SOURCE_ROOT; };
-		F9C77DDA0F7DD5CF0045F7DB /* UnitTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C77DDB0F7DD5CF0045F7DB /* UnitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UnitTests-Info.plist"; sourceTree = "<group>"; };
 		F9C77DE00F7DD7E30045F7DB /* SimpleStringDictionaryTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SimpleStringDictionaryTest.h; path = tests/SimpleStringDictionaryTest.h; sourceTree = "<group>"; };
 		F9C77DE10F7DD7E30045F7DB /* SimpleStringDictionaryTest.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = SimpleStringDictionaryTest.mm; path = tests/SimpleStringDictionaryTest.mm; sourceTree = "<group>"; };
@@ -803,17 +742,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9C77DD70F7DD5CF0045F7DB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F91AF6210FD60784009D8BE2 /* Breakpad.framework in Frameworks */,
-				8B3101EA11F0CDE300FCF3E4 /* SenTestingKit.framework in Frameworks */,
-				8B3102EB11F0D78000FCF3E4 /* Foundation.framework in Frameworks */,
-				D24BBBFD121050F000F3D417 /* breakpadUtilities.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -825,7 +753,6 @@
 				F92C563C0ECD10B3009BE4BA /* breakpadUtilities.dylib */,
 				F92C56A00ECE04A7009BE4BA /* crash_report_sender.app */,
 				F9C44DA50EF060A8003AEBAA /* BreakpadTest.app */,
-				F9C77DDA0F7DD5CF0045F7DB /* UnitTests.octest */,
 				F93803BE0F80820F004D428B /* generator_test */,
 				F93DE2D10F82A67300608B94 /* minidump_file_writer_unittest */,
 				F93DE32C0F82C55600608B94 /* handler_test */,
@@ -1041,14 +968,6 @@
 			name = sender;
 			sourceTree = "<group>";
 		};
-		F95BB87D101F949F00AA053B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F95BB885101F949F00AA053B /* crash_report */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		F95BB88A101F94AC00AA053B /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -1085,7 +1004,6 @@
 			children = (
 				F95BB894101F94C000AA053B /* symupload.xcodeproj */,
 				F95BB889101F94AC00AA053B /* dump_syms.xcodeproj */,
-				F95BB87C101F949F00AA053B /* crash_report.xcodeproj */,
 			);
 			name = Tools;
 			sourceTree = "<group>";
@@ -1359,28 +1277,6 @@
 			productReference = F9C44DA50EF060A8003AEBAA /* BreakpadTest.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F9C77DD90F7DD5CF0045F7DB /* UnitTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F9C77DDE0F7DD5D00045F7DB /* Build configuration list for PBXNativeTarget "UnitTests" */;
-			buildPhases = (
-				F9C77DD50F7DD5CF0045F7DB /* Resources */,
-				F9C77DD60F7DD5CF0045F7DB /* Sources */,
-				F9C77DD70F7DD5CF0045F7DB /* Frameworks */,
-				F9C77DD80F7DD5CF0045F7DB /* ShellScript */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F93DE2FC0F82C3C600608B94 /* PBXTargetDependency */,
-				F93DE3700F82CC1300608B94 /* PBXTargetDependency */,
-				F91AF6380FD60A74009D8BE2 /* PBXTargetDependency */,
-				D2F9A5DF12142A6A002747C1 /* PBXTargetDependency */,
-			);
-			name = UnitTests;
-			productName = UnitTests;
-			productReference = F9C77DDA0F7DD5CF0045F7DB /* UnitTests.octest */;
-			productType = "com.apple.product-type.bundle";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1412,10 +1308,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = F95BB87D101F949F00AA053B /* Products */;
-					ProjectRef = F95BB87C101F949F00AA053B /* crash_report.xcodeproj */;
-				},
-				{
 					ProductGroup = F95BB88A101F94AC00AA053B /* Products */;
 					ProjectRef = F95BB889101F94AC00AA053B /* dump_syms.xcodeproj */;
 				},
@@ -1432,7 +1324,6 @@
 				F92C569F0ECE04A7009BE4BA /* crash_report_sender */,
 				F9C44DA40EF060A8003AEBAA /* BreakpadTest */,
 				F94585840F782326009A47BF /* All */,
-				F9C77DD90F7DD5CF0045F7DB /* UnitTests */,
 				F93803BD0F80820F004D428B /* generator_test */,
 				F93DE2D00F82A67300608B94 /* minidump_file_writer_unittest */,
 				F93DE32B0F82C55600608B94 /* handler_test */,
@@ -1542,13 +1433,6 @@
 			remoteRef = 8B31F7BA11EF9A8700FCF3E4 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		F95BB885101F949F00AA053B /* crash_report */ = {
-			isa = PBXReferenceProxy;
-			fileType = "compiled.mach-o.executable";
-			path = crash_report;
-			remoteRef = F95BB884101F949F00AA053B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		F95BB892101F94AC00AA053B /* dump_syms */ = {
 			isa = PBXReferenceProxy;
 			fileType = "compiled.mach-o.executable";
@@ -1606,13 +1490,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9C77DD50F7DD5CF0045F7DB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
@@ -1630,19 +1507,6 @@
 			shellPath = /bin/sh;
 			shellScript = "install_name_tool -change \"@loader_path/Resources/breakpadUtilities.dylib\" \"@executable_path/breakpadUtilities.dylib\" ${BUILT_PRODUCTS_DIR}/Inspector";
 			showEnvVarsInLog = 0;
-		};
-		F9C77DD80F7DD5CF0045F7DB /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n\necho running minidump generator tests...\n\"${BUILT_PRODUCTS_DIR}/generator_test\"\necho Running exception handler tests...\n\"${BUILT_PRODUCTS_DIR}/handler_test\"\necho Running crash generation server tests...\n\"${BUILT_PRODUCTS_DIR}/crash_generation_server_test\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1851,17 +1715,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F9C77DD60F7DD5CF0045F7DB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F9C77DE40F7DD82F0045F7DB /* SimpleStringDictionary.mm in Sources */,
-				F9C77DE20F7DD7E30045F7DB /* SimpleStringDictionaryTest.mm in Sources */,
-				F9C77E130F7DDF810045F7DB /* GTMSenTestCase.m in Sources */,
-				F91AF5D00FD60393009D8BE2 /* BreakpadFramework_Test.mm in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -1915,16 +1768,6 @@
 			target = D2F9A41412131EF0002747C1 /* gtest */;
 			targetProxy = D2F9A52C121383A1002747C1 /* PBXContainerItemProxy */;
 		};
-		D2F9A5DF12142A6A002747C1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D2F9A52A121383A1002747C1 /* crash_generation_server_test */;
-			targetProxy = D2F9A5DE12142A6A002747C1 /* PBXContainerItemProxy */;
-		};
-		F91AF6380FD60A74009D8BE2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 8DC2EF4F0486A6940098B216 /* Breakpad */;
-			targetProxy = F91AF6370FD60A74009D8BE2 /* PBXContainerItemProxy */;
-		};
 		F92C564E0ECD10E5009BE4BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = F92C563B0ECD10B3009BE4BA /* breakpadUtilities */;
@@ -1939,21 +1782,6 @@
 			isa = PBXTargetDependency;
 			target = F92C53530ECCE349009BE4BA /* Inspector */;
 			targetProxy = F92C56870ECD15F1009BE4BA /* PBXContainerItemProxy */;
-		};
-		F93DE2FC0F82C3C600608B94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F93803BD0F80820F004D428B /* generator_test */;
-			targetProxy = F93DE2FB0F82C3C600608B94 /* PBXContainerItemProxy */;
-		};
-		F93DE3700F82CC1300608B94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F93DE32B0F82C55600608B94 /* handler_test */;
-			targetProxy = F93DE36F0F82CC1300608B94 /* PBXContainerItemProxy */;
-		};
-		F93DE3A70F830D1D00608B94 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F9C77DD90F7DD5CF0045F7DB /* UnitTests */;
-			targetProxy = F93DE3A60F830D1D00608B94 /* PBXContainerItemProxy */;
 		};
 		F94585880F78232B009A47BF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1989,11 +1817,6 @@
 			isa = PBXTargetDependency;
 			name = symupload;
 			targetProxy = F95BB8B4101F94D300AA053B /* PBXContainerItemProxy */;
-		};
-		F95BB8B7101F94D300AA053B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = crash_report;
-			targetProxy = F95BB8B6101F94D300AA053B /* PBXContainerItemProxy */;
 		};
 		F9C44E1A0EF0790F003AEBAA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2535,23 +2358,6 @@
 			};
 			name = "Debug With Code Coverage";
 		};
-		F93DE3C00F830E7000608B94 /* Debug With Code Coverage */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				HEADER_SEARCH_PATHS = ../..;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = "Debug With Code Coverage";
-		};
 		F93DE3C10F830E7000608B94 /* Debug With Code Coverage */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2634,38 +2440,6 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = testapp/Info.plist;
 				PRODUCT_NAME = BreakpadTest;
-			};
-			name = Release;
-		};
-		F9C77DDC0F7DD5D00045F7DB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
-			};
-			name = Debug;
-		};
-		F9C77DDD0F7DD5D00045F7DB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
-				);
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
-				INFOPLIST_FILE = "UnitTests-Info.plist";
-				PRODUCT_NAME = UnitTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -2798,16 +2572,6 @@
 				F9C44DA80EF060A8003AEBAA /* Debug */,
 				F93DE3BE0F830E7000608B94 /* Debug With Code Coverage */,
 				F9C44DA90EF060A8003AEBAA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F9C77DDE0F7DD5D00045F7DB /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F9C77DDC0F7DD5D00045F7DB /* Debug */,
-				F93DE3C00F830E7000608B94 /* Debug With Code Coverage */,
-				F9C77DDD0F7DD5D00045F7DB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
